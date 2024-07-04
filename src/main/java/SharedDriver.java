@@ -1,6 +1,7 @@
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class SharedDriver {
 
@@ -12,6 +13,9 @@ public class SharedDriver {
 //            WebDriverManager.chromedriver().clearDriverCache();
             WebDriverManager.chromedriver().setup();
             webDriver = new ChromeDriver();
+
+//            WebDriverManager.firefoxdriver().setup();
+//            webDriver = new FirefoxDriver();
         }
         return webDriver;
     }
